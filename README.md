@@ -1,3 +1,3 @@
 # hello-world
 This repository is for practicing the GitHub Flow.
-Mani sauc Andris Ozoliņš
+Mani sauc Andris Ozoliņš.
