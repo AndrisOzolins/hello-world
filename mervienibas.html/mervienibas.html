@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-
-    <head>
-        <title>Informācijas daudzuma mērvienības</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body background="cipari.jpg">
+<html>
+<head>
+    <title>Informācijas daudzuma mērvienības</title>
+    <style>
+        body {
+            background-image: url('cipari.jpg');
+        }
+        form {
+            font-size: 20px;
+            background-color: rgb(220, 220, 0);
+        }
+    </style>
+</head>
+<body>
     <h1>Informācijas daudzuma mērvienības</h1>
     <form>
-        <div><input type="text" name="sk1"> GB</div>
-        <p><div><input value="izteikt megabaitos" name="reiz" onclick="rez.value =sk1.value*1000" type="button">
-            <input name="rez"> MB</div></p>          
-            <p><div><input onclick="raz.value =sk1.value*953.674316;" name="razz" value="izteikt mibibaitos" type="button">
-                 <input name="raz"> MiB</div></p>
-</form>
+        <p><input type="text" id="gb">GB=</p>
+        <p><button type="button" onclick="convertToMB()">Pārveidot uz MB</button><input type="text" id="mb">MB</p>
+        <p><button type="button" onclick="convertToMiB()">Pārveidot uz MiB</button><input type="text" id="mib">MiB</p>
+    </form>
+    <script>
+        function convertToMB() {
+            var gb = document.getElementById('gb').value;
+            var mb = gb * 1000;
+            document.getElementById('mb').value = mb;
+        }
+
+        function convertToMiB() {
+            var gb = document.getElementById('gb').value;
+            var mib = gb * 953.674316;
+            document.getElementById('mib').value = mib;
+        }
+    </script>
 </body>
 </html>
